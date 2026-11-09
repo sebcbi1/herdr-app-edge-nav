@@ -7,6 +7,8 @@ A [Herdr.app](https://herdr.dev) mod for directional pane navigation that keeps 
 - At the first/last tab or space it **wraps around** and lands on the pane nearest the side you came from.
 - **Neovim-aware** (optional): the same keys move between Neovim splits first and only reach Herdr at Neovim's own window edge.
 
+![Edge Nav](preview.png)
+
 This is the Herdr.app port of the TUI plugin [herdr-edge-nav](https://github.com/sebcbi1/herdr-edge-nav): TUI workspaces are Herdr.app spaces. The repo holds both the mod and its Neovim plugin.
 
 ## Install

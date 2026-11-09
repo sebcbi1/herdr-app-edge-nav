@@ -2,6 +2,8 @@
 
 Directional pane navigation that keeps going past the edge of the panes. The person presses `ctrl-left/right/up/down` and focus moves to the neighbouring pane. At the edge of the tab, left/right crosses into the adjacent tab and up/down into the adjacent space, wrapping around at the ends. Inside Neovim, the same keys move between Neovim windows first. There is nothing to see: the mod draws no UI.
 
+![Edge Nav](preview.png)
+
 ## What you see
 
 Nothing new on screen. The mod's single copy is a 0px block docked at the bottom of the layout. The only visible effect is focus moving: between panes, onto another tab (the tab bar's active pill changes), or onto another space (the sidebar's selected space changes).
