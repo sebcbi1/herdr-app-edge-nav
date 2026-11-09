@@ -11,8 +11,14 @@ This is the Herdr.app port of the TUI plugin [herdr-edge-nav](https://github.com
 
 ## Install
 
+With Herdr.app open, ask the agent in your Herdr window: *"add the mod at github.com/sebcbi1/herdr-app-edge-nav"*. It reads [RECIPE.md](RECIPE.md) and the files, copies `mods/edge-nav/` into `~/.config/herdr-app/mods/`, merges `keys.json` and checks the mod.
+
+Or by hand:
+
 ```sh
-cp -R mods/edge-nav ~/.config/herdr-app/mods/
+git clone https://github.com/sebcbi1/herdr-app-edge-nav
+cp -R herdr-app-edge-nav/mods/edge-nav ~/.config/herdr-app/mods/
+herdr-app check ~/.config/herdr-app/mods/edge-nav
 ```
 
 Copy the folder rather than symlinking it: Herdr.app does not hot-reload a symlinked mod folder.
@@ -32,7 +38,16 @@ The mod draws nothing. The first time Herdr sees it, it docks one invisible copy
 { "id": "edge-nav", "type": "block", "size": { "px": 0 }, "content": { "mod": "edge-nav" } }
 ```
 
-Check it with `herdr-app check ~/.config/herdr-app/mods/edge-nav`.
+### Updating
+
+An installed copy doesn't update itself. Ask your Herdr agent to *"update the edge-nav mod from github.com/sebcbi1/herdr-app-edge-nav"*, or by hand:
+
+```sh
+git -C herdr-app-edge-nav pull
+cp -R herdr-app-edge-nav/mods/edge-nav/. ~/.config/herdr-app/mods/edge-nav/
+```
+
+The Neovim plugin updates with your plugin manager (`vim.pack.update()`, `:Lazy update`).
 
 ## Options
 
