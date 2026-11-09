@@ -1,0 +1,8 @@
+{
+  "global": {
+    "ctrl-left": "edge-nav.left",
+    "ctrl-right": "edge-nav.right",
+    "ctrl-up": "edge-nav.up",
+    "ctrl-down": "edge-nav.down"
+  }
+}
